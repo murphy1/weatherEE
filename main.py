@@ -71,7 +71,7 @@ def dark_sky_api_hourly():
         for k, v in dark_sky_api().items():
             if k == "hourly":
                 # Dark sky API provides its data hourly. So we need to skip hours to get the 3 hour forecast
-                for time in (v["data"])[1:26:3]:
+                for time in (v["data"])[:33:3]:
                     dsky_weather_hourly = list()
                     # convert the UNIX timestamp in a human readable time
                     unix_time_stamp = (time["time"])
@@ -84,6 +84,8 @@ def dark_sky_api_hourly():
                     # remove the decimal point from the humidity
                     humidity = (str(time["humidity"])).split(".")
                     dsky_weather_hourly.append("Humidity: "+humidity[1])
+                    precipitation = (str(time["precipProbability"])).split(".")
+                    dsky_weather_hourly.append("Precipitation Percent: "+precipitation[1])
                     dsky_weather.append(dsky_weather_hourly)
     except Exception as err:
         logging.warning("Error with the Dark Sky API hourly for loop")
@@ -111,21 +113,22 @@ def open_weather_api_hourly():
     try:
         for k, v in open_weather_api().items():
             if k == "list":
-                for key in v[:9]:
+                for key in v[:7]:
                     owm_weather_hour = list()
                     owm_weather_hour.append("Time: "+key["dt_txt"])
-                    for desc in key["weather"]:
-                        owm_weather_hour.append("Description: "+desc["description"])
                     # -273 to convert from Kelvin to Celcius
                     owm_weather_hour.append("Temp: "+str(round((key["main"]["temp"])-273)))
                     owm_weather_hour.append("Humidity: "+str(key["main"]["humidity"]))
+                    if (str(key["rain"])) == "{}":
+                        owm_weather_hour.append("Precipitation: 0")
+                    else:
+                        owm_weather_hour.append(str("Precipitation: "+str(key["rain"]["3h"])))
                     owm_weather.append(owm_weather_hour)
     except Exception as err:
         logging.warning("Error with the Open Weather API hourly for loop")
         logging.warning(str(err))
 
     return owm_weather
-
 
 # Set the static y axis numbers (ticks)
 
@@ -154,27 +157,43 @@ def y_axis_asc_humidity():
         logging.debug(str(err))
 
 
+def y_axis_asc_precipitation():
+    # this method will set the y axis numbers for the precipitation
+    try:
+        plot_data_for_precipitation = []
+        for i in range(0, 101, 5):
+            plot_data_for_precipitation.append(float(i))
+        return plot_data_for_precipitation
+    except Exception as err:
+        logging.debug("Problem with the precipitation ascending number method")
+        logging.debug(str(err))
+
 # plotting Open Weather Map results with Matplotlib
 
 
 time_list = []
 temp_list = []
 humidity_list = []
+precipitation_list = []
 # add the time, temp and humidity to lists which can be plotted
 for lst in open_weather_api_hourly():
     time = lst[0].split(" ")
     time_list.append(time[2])
-    temp = lst[2].split(" ")
+    temp = lst[1].split(" ")
     temp_list.append(temp[1])
-    humidity = lst[3].split(" ")
+    humidity = lst[2].split(" ")
     humidity_list.append(humidity[1])
+    precipitation = lst[3].split(" ")
+    precipitation_list.append(precipitation[1])
 
 del time_list[-1]
 del temp_list[-1]
+del precipitation_list[-1]
 # change the list to floats for an ordered list
 float_temp_list_for_graph = [float(i) for i in temp_list]
 del humidity_list[-1]
 float_humidity_list_for_graph = [float(i) for i in humidity_list]
+float_precipitation_list_for_graph = [float(i) for i in precipitation_list]
 
 
 def open_weather_map_temp():
@@ -204,6 +223,20 @@ def open_weather_map_humidity():
         plt.show()
     except Exception as err:
         logging.info("Problem with the OWM humidity graph")
+        logging.info(str(err))
+
+def open_weather_map_precip():
+    try:
+        plt.plot(time_list, float_precipitation_list_for_graph, color="red")
+        plt.title("Open Weather Map Precipitation")
+        plt.xlabel("Time")
+        plt.gcf().autofmt_xdate()
+        plt.ylabel("Precipitation %")
+        plt.yticks(y_axis_asc_precipitation())
+        plt.grid(True)
+        plt.show()
+    except Exception as err:
+        logging.info("Problem with the OWM Precipitation graph")
         logging.info(str(err))
 
 
@@ -243,6 +276,7 @@ def accuweather_temp():
 dsky_time_for_graph = []
 dsky_temp_for_graph = []
 dsky_humidity_for_graph = []
+dsky_precipitation_for_graph = []
 for key in dark_sky_api_hourly():
     # add the time, temp and humidity to lists so they can be plotted
     dsky_time = key[0].split(" ")
@@ -251,6 +285,8 @@ for key in dark_sky_api_hourly():
     dsky_temp_for_graph .append(dsky_temp[1])
     dsky_humidity = key[3].split(" ")
     dsky_humidity_for_graph.append(dsky_humidity[1])
+    dsky_precipitation = key[4].split(" ")
+    dsky_precipitation_for_graph.append(dsky_precipitation[2])
 
 # convert temp from string to floats for an ascending y-axis
 float_dsky_temp_for_graph = [float(i) for i in dsky_temp_for_graph]
@@ -258,13 +294,18 @@ float_dsky_temp_for_graph = [float(i) for i in dsky_temp_for_graph]
 # convert humidity from string to floats for an ascending y-axis
 float_dsky_humidity_for_graph = [float(i) for i in dsky_humidity_for_graph]
 
+# convert precipitation from string to floats for an ascending y-axis
+float_dsky_precipitation_for_graph = [float(i) for i in dsky_precipitation_for_graph]
+
 # remove a variable off the end of each list (prevents the plot from going backwards)
 del dsky_time_for_graph[-1]
 del float_dsky_temp_for_graph[-1]
 del float_dsky_humidity_for_graph[-1]
-
+del float_dsky_precipitation_for_graph[-1]
 
 # plot the graph for temp
+
+
 def dark_sky_temp():
     try:
         plt.plot(dsky_time_for_graph, float_dsky_temp_for_graph, color="red")
@@ -295,6 +336,21 @@ def dark_sky_humidity():
         plt.show()
     except Exception as err:
         logging.info("Problem with the Dark Sky humidity graph")
+        logging.info(str(err))
+
+
+def dark_sky_precip():
+    try:
+        plt.plot(dsky_time_for_graph, float_dsky_precipitation_for_graph, color="red")
+        plt.title("Dark Sky Precipitation")
+        plt.xlabel("Time")
+        plt.gcf().autofmt_xdate()
+        plt.ylabel("Precipitation %")
+        plt.yticks(y_axis_asc_precipitation())
+        plt.grid(True)
+        plt.show()
+    except Exception as err:
+        logging.info("Problem with the Dark Sky Precipitation graph")
         logging.info(str(err))
 
 
