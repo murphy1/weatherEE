@@ -1,7 +1,9 @@
+# !# python 3
 # this program will get the weather from open weather map. With 3 hour forecasts
+
 import requests
 import json
-from datetime import datetime, timedelta
+from datetime import datetime
 import matplotlib.pyplot as plt
 import logging
 
@@ -13,7 +15,9 @@ dark_sky_api_key = ""
 acc_api_key = ""
 
 
-# Accuweather API
+# Accuweather API -----
+
+
 def accuweather_api():
     try:
         acc_dublin = requests.get("http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=%s" % acc_api_key)
@@ -25,14 +29,8 @@ def accuweather_api():
         logging.warning(str(err))
 
 
-# DateTime
-# IconPhrase
-# Temperature (dict with value 'Value')
-
 def accuweather_api_hourly():
     acc_weather = []
-
-    # 50 calls per day !!!!!!!!!!
     try:
         for hour in accuweather_api()[:50:3]:
             acc_weather_hourly = list()
@@ -51,9 +49,10 @@ def accuweather_api_hourly():
         logging.warning("Exception: "+str(err))
 
     return acc_weather
-    
 
-# 1000 calls per day
+
+# Dark Sky API -----
+
 
 def dark_sky_api():
     try:
@@ -65,13 +64,9 @@ def dark_sky_api():
         logging.warning("Problem with the Dark Sky API")
         logging.warning(str(err))
 
+
 def dark_sky_api_hourly():
     dsky_weather = []
-
-    # time
-    # description
-    # temp
-    # humidity
     try:
         for k, v in dark_sky_api().items():
             if k == "hourly":
@@ -92,12 +87,15 @@ def dark_sky_api_hourly():
                     dsky_weather.append(dsky_weather_hourly)
     except Exception as err:
         logging.warning("Error with the Dark Sky API hourly for loop")
-        logging.warn("Exception: "+str(err))
+        logging.warning("Exception: "+str(err))
 
     return dsky_weather
 
+
+# Open Weather Map API -----
+
+
 def open_weather_api():
-    # 60 calls per min
     try:
         owm_dublin = requests.get("http://api.openweathermap.org/data/2.5/forecast?id=2964574&APPID=%s" % owm_api_key)
         owm_dublin.raise_for_status()
@@ -107,13 +105,10 @@ def open_weather_api():
         logging.warning("Error with the Open Weather Map API")
         logging.warning(str(err))
 
+
 def open_weather_api_hourly():
     owm_weather = []
-    # key["dt_txt"] = gets the time
-    # key["main"] = includes temp
-    # key["weather"] = gets the description
     try:
-
         for k, v in open_weather_api().items():
             if k == "list":
                 for key in v[:9]:
@@ -132,6 +127,9 @@ def open_weather_api_hourly():
     return owm_weather
 
 
+# Set the static y axis numbers (ticks)
+
+
 def y_axis_asc_temp():
     # this method will set the y axis numbers for the temp
     try:
@@ -142,6 +140,7 @@ def y_axis_asc_temp():
     except Exception as err:
         logging.debug("Problem with the y axis temp numbers")
         logging.debug(str(err))
+
 
 def y_axis_asc_humidity():
     # this method will set the y axis numbers for Humidity
@@ -158,10 +157,10 @@ def y_axis_asc_humidity():
 # plotting Open Weather Map results with Matplotlib
 
 
-# get the Time, Temp and Humidity for the Axes
 time_list = []
 temp_list = []
 humidity_list = []
+# add the time, temp and humidity to lists which can be plotted
 for lst in open_weather_api_hourly():
     time = lst[0].split(" ")
     time_list.append(time[2])
@@ -177,7 +176,7 @@ float_temp_list_for_graph = [float(i) for i in temp_list]
 del humidity_list[-1]
 float_humidity_list_for_graph = [float(i) for i in humidity_list]
 
-# OWM Time and Temp
+
 def open_weather_map_temp():
     try:
         plt.plot(time_list, float_temp_list_for_graph, color="red")
@@ -192,7 +191,7 @@ def open_weather_map_temp():
         logging.info("Problem with the OWM temp graph")
         logging.info(str(err))
 
-# OWN Time and Humidity
+
 def open_weather_map_humidity():
     try:
         plt.plot(time_list, float_humidity_list_for_graph, color="red")
@@ -209,8 +208,11 @@ def open_weather_map_humidity():
 
 
 # Plotting Accuweather with Matplotlib
+
+
 acc_time_for_graph = []
 acc_temp_for_graph = []
+# add the time and temp to lists so they can be plotted
 for key in accuweather_api_hourly():
     acc_time = key[0].split(" ")
     acc_time_for_graph.append(acc_time[2])
@@ -219,6 +221,7 @@ for key in accuweather_api_hourly():
 
 # convert stings to floats for ascending correct y axis
 float_temp_for_graph = [float(i) for i in acc_temp_for_graph]
+
 
 def accuweather_temp():
     try:
@@ -233,13 +236,15 @@ def accuweather_temp():
         logging.info("Problem with the Accuweather Temp Graph")
         logging.info(str(err))
 
+
 # plotting Dark Sky API with Matplotlib
 
-# get the Time, Temp and Humidity for the axes
+
 dsky_time_for_graph = []
 dsky_temp_for_graph = []
 dsky_humidity_for_graph = []
 for key in dark_sky_api_hourly():
+    # add the time, temp and humidity to lists so they can be plotted
     dsky_time = key[0].split(" ")
     dsky_time_for_graph.append(dsky_time[2])
     dsky_temp = key[2].split(" ")
@@ -253,7 +258,7 @@ float_dsky_temp_for_graph = [float(i) for i in dsky_temp_for_graph]
 # convert humidity from string to floats for an ascending y-axis
 float_dsky_humidity_for_graph = [float(i) for i in dsky_humidity_for_graph]
 
-# remove a variable off the end of each list for a nicer graph
+# remove a variable off the end of each list (prevents the plot from going backwards)
 del dsky_time_for_graph[-1]
 del float_dsky_temp_for_graph[-1]
 del float_dsky_humidity_for_graph[-1]
@@ -274,7 +279,10 @@ def dark_sky_temp():
         logging.info("Problem with the Dark Sky temp graph")
         logging.info(str(err))
 
+
 # plot the graph for humidity
+
+
 def dark_sky_humidity():
     try:
         plt.plot(dsky_time_for_graph, float_dsky_humidity_for_graph, color="red")
@@ -289,7 +297,10 @@ def dark_sky_humidity():
         logging.info("Problem with the Dark Sky humidity graph")
         logging.info(str(err))
 
+
 # get average temp per hour and plot (d sky and owm)
+
+
 def average_temp():
     try:
         avg_temps = []
@@ -310,7 +321,10 @@ def average_temp():
         logging.info("Problem with the average temp graph")
         logging.info(str(err))
 
+
 # get average humidity per hour and plot (d sky and owm)
+
+
 def average_humidity():
     try:
         avg_humidity = []
@@ -331,5 +345,5 @@ def average_humidity():
         logging.info("Problem with the average humidity graph")
         logging.info(str(err))
 
-average_temp()
+
 logging.debug("END ----- End of program")

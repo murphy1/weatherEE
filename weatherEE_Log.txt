@@ -30,3 +30,112 @@
 2018-09-11 16:35:17,416 - WARNING - Exception: 'NoneType' object is not subscriptable
 2018-09-11 16:35:17,419 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
 2018-09-11 16:35:18,534 - DEBUG - END ----- End of program
+2018-09-11 19:18:10,387 - DEBUG - NEW ----- Start of program
+2018-09-11 19:18:10,390 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:18:11,263 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:18:11,784 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:18:12,516 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:18:12,595 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:18:13,061 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:18:13,263 - DEBUG - END ----- End of program
+2018-09-11 19:19:42,560 - DEBUG - NEW ----- Start of program
+2018-09-11 19:19:42,563 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:19:42,661 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:19:42,986 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:19:43,722 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:19:43,800 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:19:44,263 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:19:44,483 - DEBUG - END ----- End of program
+2018-09-11 19:20:12,557 - DEBUG - NEW ----- Start of program
+2018-09-11 19:20:12,560 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:12,651 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:12,848 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:13,772 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:13,851 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:14,313 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:14,510 - DEBUG - END ----- End of program
+2018-09-11 19:20:22,505 - DEBUG - NEW ----- Start of program
+2018-09-11 19:20:22,508 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:22,597 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:22,797 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:23,492 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:23,570 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:24,033 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:24,232 - DEBUG - END ----- End of program
+2018-09-11 19:20:51,144 - DEBUG - NEW ----- Start of program
+2018-09-11 19:20:51,147 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:51,280 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:51,493 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:52,208 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:20:52,287 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:20:52,753 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:20:52,950 - DEBUG - END ----- End of program
+2018-09-11 19:21:02,199 - DEBUG - NEW ----- Start of program
+2018-09-11 19:21:02,203 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:02,295 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:02,495 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:03,379 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:03,472 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:03,992 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:04,195 - DEBUG - END ----- End of program
+2018-09-11 19:21:11,812 - DEBUG - NEW ----- Start of program
+2018-09-11 19:21:11,815 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:11,932 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:12,127 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:12,842 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:12,923 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:13,391 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:13,600 - DEBUG - END ----- End of program
+2018-09-11 19:21:20,077 - DEBUG - NEW ----- Start of program
+2018-09-11 19:21:20,080 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:20,176 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:20,374 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:21,174 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:21:21,258 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:21:21,777 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:21:21,980 - DEBUG - END ----- End of program
+2018-09-11 19:23:18,368 - DEBUG - NEW ----- Start of program
+2018-09-11 19:23:18,370 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:23:18,476 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:23:21,050 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:23:21,773 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:23:21,859 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:23:22,341 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:25:04,155 - DEBUG - NEW ----- Start of program
+2018-09-11 19:25:04,158 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:25:04,273 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:25:04,524 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:25:05,253 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:25:05,330 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:25:05,789 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:25:06,017 - DEBUG - END ----- End of program
+2018-09-11 19:34:39,287 - DEBUG - NEW ----- Start of program
+2018-09-11 19:34:39,287 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-11 19:34:39,287 - WARNING - 'NoneType' object has no attribute 'items'
+2018-09-11 19:35:22,445 - DEBUG - NEW ----- Start of program
+2018-09-11 19:35:22,449 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:35:22,577 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:35:22,799 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:35:23,696 - DEBUG - END ----- End of program
+2018-09-11 19:37:45,784 - DEBUG - NEW ----- Start of program
+2018-09-11 19:37:45,787 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:37:45,907 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:37:46,134 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:37:46,982 - DEBUG - END ----- End of program
+2018-09-11 19:38:14,576 - DEBUG - NEW ----- Start of program
+2018-09-11 19:38:14,580 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:38:14,667 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:38:14,864 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:38:15,779 - DEBUG - END ----- End of program
+2018-09-11 19:39:04,027 - DEBUG - NEW ----- Start of program
+2018-09-11 19:39:04,030 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:39:04,135 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 19:39:04,379 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:39:05,087 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 19:39:05,550 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 19:39:05,633 - DEBUG - END ----- End of program
+2018-09-11 20:55:21,336 - DEBUG - NEW ----- Start of program
+2018-09-11 20:55:21,340 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 20:55:21,467 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 20:55:21,910 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 20:55:25,436 - DEBUG - END ----- End of program
