@@ -1,0 +1,64 @@
+2018-09-10 23:10:41,756 - DEBUG - NEW ----- Start of program
+2018-09-10 23:10:41,760 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-10 23:10:44,349 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast?id=2964574&APPID=4730ac06fb306c418e713aab6771ca6e HTTP/1.1" 200 14829
+2018-09-10 23:10:44,373 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-10 23:10:44,694 - DEBUG - http://dataservice.accuweather.com:80 "GET /forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN HTTP/1.1" 503 180
+2018-09-10 23:10:44,695 - WARNING - Problem with loading the Accuweather API
+2018-09-10 23:10:44,696 - WARNING - 503 Server Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN
+2018-09-10 23:10:44,696 - WARNING - Error with the accuweather hourly for loop
+2018-09-10 23:10:44,696 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-10 23:10:44,698 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-10 23:10:45,379 - DEBUG - https://api.darksky.net:443 "GET /forecast/70035485b146595569d7e98f9ac7580d/53.3498,6.2603 HTTP/1.1" 200 None
+2018-09-10 23:10:45,491 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\smurp\\PycharmProjects\\weatherEE\\venv\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+2018-09-10 23:10:45,658 - DEBUG - END ----- End of program
+2018-09-10 23:15:54,163 - DEBUG - NEW ----- Start of program
+2018-09-10 23:15:54,166 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-10 23:15:54,238 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast?id=2964574&APPID=4730ac06fb306c418e713aab6771ca6e HTTP/1.1" 200 14829
+2018-09-10 23:15:54,267 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-10 23:15:54,498 - DEBUG - http://dataservice.accuweather.com:80 "GET /forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN HTTP/1.1" 503 180
+2018-09-10 23:15:54,500 - WARNING - Problem with loading the Accuweather API
+2018-09-10 23:15:54,500 - WARNING - 503 Server Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN
+2018-09-10 23:15:54,500 - WARNING - Error with the accuweather hourly for loop
+2018-09-10 23:15:54,500 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-10 23:15:54,504 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-10 23:15:55,209 - DEBUG - https://api.darksky.net:443 "GET /forecast/70035485b146595569d7e98f9ac7580d/53.3498,6.2603 HTTP/1.1" 200 None
+2018-09-10 23:15:55,214 - DEBUG - END ----- End of program
+2018-09-10 23:16:52,015 - DEBUG - NEW ----- Start of program
+2018-09-10 23:16:52,018 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-10 23:16:52,094 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast?id=2964574&APPID=4730ac06fb306c418e713aab6771ca6e HTTP/1.1" 200 14829
+2018-09-10 23:16:52,110 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-10 23:16:52,311 - DEBUG - http://dataservice.accuweather.com:80 "GET /forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN HTTP/1.1" 503 180
+2018-09-10 23:16:52,313 - WARNING - Problem with loading the Accuweather API
+2018-09-10 23:16:52,314 - WARNING - 503 Server Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN
+2018-09-10 23:16:52,314 - WARNING - Error with the accuweather hourly for loop
+2018-09-10 23:16:52,314 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-10 23:16:52,319 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-10 23:16:53,041 - DEBUG - https://api.darksky.net:443 "GET /forecast/70035485b146595569d7e98f9ac7580d/53.3498,6.2603 HTTP/1.1" 200 None
+2018-09-10 23:16:53,090 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\smurp\\PycharmProjects\\weatherEE\\venv\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+2018-09-10 23:16:53,162 - DEBUG - END ----- End of program
+2018-09-11 01:20:48,320 - DEBUG - NEW ----- Start of program
+2018-09-11 01:20:48,324 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 01:20:48,416 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast?id=2964574&APPID=4730ac06fb306c418e713aab6771ca6e HTTP/1.1" 200 14466
+2018-09-11 01:20:48,441 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 01:20:49,073 - DEBUG - http://dataservice.accuweather.com:80 "GET /forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN HTTP/1.1" 503 180
+2018-09-11 01:20:49,074 - WARNING - Problem with loading the Accuweather API
+2018-09-11 01:20:49,074 - WARNING - 503 Server Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN
+2018-09-11 01:20:49,074 - WARNING - Error with the accuweather hourly for loop
+2018-09-11 01:20:49,074 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-11 01:20:49,076 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 01:20:49,739 - DEBUG - https://api.darksky.net:443 "GET /forecast/70035485b146595569d7e98f9ac7580d/53.3498,6.2603 HTTP/1.1" 200 None
+2018-09-11 01:20:49,782 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\smurp\\PycharmProjects\\weatherEE\\venv\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+2018-09-11 01:20:49,843 - DEBUG - END ----- End of program
+2018-09-11 01:21:22,931 - DEBUG - NEW ----- Start of program
+2018-09-11 01:21:22,935 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-11 01:21:23,005 - DEBUG - http://api.openweathermap.org:80 "GET /data/2.5/forecast?id=2964574&APPID=4730ac06fb306c418e713aab6771ca6e HTTP/1.1" 200 14466
+2018-09-11 01:21:23,023 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-11 01:21:23,223 - DEBUG - http://dataservice.accuweather.com:80 "GET /forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN HTTP/1.1" 503 180
+2018-09-11 01:21:23,224 - WARNING - Problem with loading the Accuweather API
+2018-09-11 01:21:23,224 - WARNING - 503 Server Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=LAi7ksP37CN4PvH3ykftHfJdVBWlSXPN
+2018-09-11 01:21:23,224 - WARNING - Error with the accuweather hourly for loop
+2018-09-11 01:21:23,224 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-11 01:21:23,225 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-11 01:21:23,994 - DEBUG - https://api.darksky.net:443 "GET /forecast/70035485b146595569d7e98f9ac7580d/53.3498,6.2603 HTTP/1.1" 200 None
+2018-09-11 01:21:24,045 - DEBUG - findfont: Matching :family=sans-serif:style=normal:variant=normal:weight=normal:stretch=normal:size=10.0 to DejaVu Sans ('C:\\Users\\smurp\\PycharmProjects\\weatherEE\\venv\\lib\\site-packages\\matplotlib\\mpl-data\\fonts\\ttf\\DejaVuSans.ttf') with score of 0.050000
+2018-09-11 01:21:24,225 - DEBUG - END ----- End of program
