@@ -180,11 +180,13 @@ float_humidity_list_for_graph = [float(i) for i in humidity_list]
 # OWM Time and Temp
 def open_weather_map_temp():
     try:
-        plt.plot(time_list, float_temp_list_for_graph)
-        plt.xlabel("Time (Open Weather Map)")
+        plt.plot(time_list, float_temp_list_for_graph, color="red")
+        plt.title("Open Weather Map Temperature")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Temperature")
         plt.yticks(y_axis_asc_temp())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the OWM temp graph")
@@ -193,11 +195,13 @@ def open_weather_map_temp():
 # OWN Time and Humidity
 def open_weather_map_humidity():
     try:
-        plt.plot(time_list, float_humidity_list_for_graph)
-        plt.xlabel("Time (Open Weather Map)")
+        plt.plot(time_list, float_humidity_list_for_graph, color="red")
+        plt.title("Open Weather Map Humidity")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Humidity")
         plt.yticks(y_axis_asc_humidity())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the OWM humidity graph")
@@ -218,10 +222,12 @@ float_temp_for_graph = [float(i) for i in acc_temp_for_graph]
 
 def accuweather_temp():
     try:
-        plt.plot(acc_time_for_graph, float_temp_for_graph)
+        plt.plot(acc_time_for_graph, float_temp_for_graph, color="red")
+        plt.title("Accuweather Temperature")
         plt.yticks(y_axis_asc_temp())
-        plt.xlabel("Time (Accuweather)")
+        plt.xlabel("Time")
         plt.ylabel("Temperature:")
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the Accuweather Temp Graph")
@@ -257,10 +263,12 @@ del float_dsky_humidity_for_graph[-1]
 def dark_sky_temp():
     try:
         plt.plot(dsky_time_for_graph, float_dsky_temp_for_graph, color="red")
-        plt.xlabel("Time (Dark Sky)")
+        plt.title("Dark Sky Temperature")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Temperature")
         plt.yticks(y_axis_asc_temp())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the Dark Sky temp graph")
@@ -269,11 +277,13 @@ def dark_sky_temp():
 # plot the graph for humidity
 def dark_sky_humidity():
     try:
-        plt.plot(dsky_time_for_graph, float_dsky_humidity_for_graph)
-        plt.xlabel("Time (Dark Sky)")
+        plt.plot(dsky_time_for_graph, float_dsky_humidity_for_graph, color="red")
+        plt.title("Dark Sky Humidity")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Humidity")
         plt.yticks(y_axis_asc_humidity())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the Dark Sky humidity graph")
@@ -288,11 +298,13 @@ def average_temp():
             avg_temps.append((owm_num + float_dsky_temp_for_graph[count_avg_temp]) / 2)
             count_avg_temp += 1
 
-        plt.plot(dsky_time_for_graph, avg_temps)
-        plt.xlabel("Time (Average)")
+        plt.plot(dsky_time_for_graph, avg_temps, color="red")
+        plt.title("Average Temperature (Dark Sky and OWM)")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Temperature")
         plt.yticks(y_axis_asc_temp())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the average temp graph")
@@ -307,17 +319,17 @@ def average_humidity():
             avg_humidity.append((owm_num + float_dsky_humidity_for_graph[count_avg_humidity]) / 2)
             count_avg_humidity += 1
 
-        plt.plot(dsky_time_for_graph, avg_humidity)
-        plt.xlabel("Time (Average)")
+        plt.plot(dsky_time_for_graph, avg_humidity, color="red")
+        plt.title("Average Humidity (Dark Sky and OWM)")
+        plt.xlabel("Time")
         plt.gcf().autofmt_xdate()
         plt.ylabel("Humidity")
         plt.yticks(y_axis_asc_humidity())
+        plt.grid(True)
         plt.show()
     except Exception as err:
         logging.info("Problem with the average humidity graph")
         logging.info(str(err))
 
-
 average_temp()
-average_humidity()
 logging.debug("END ----- End of program")
