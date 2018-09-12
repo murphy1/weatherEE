@@ -1,62 +1,125 @@
-2018-09-11 22:41:28,345 - DEBUG - NEW ----- Start of program
-2018-09-11 22:41:28,349 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:41:28,463 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:41:28,692 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:41:28,693 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:41:28,693 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:41:28,694 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:41:29,418 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:41:29,418 - WARNING - Exception: list index out of range
-2018-09-11 22:41:29,553 - DEBUG - END ----- End of program
-2018-09-11 22:41:57,855 - DEBUG - NEW ----- Start of program
-2018-09-11 22:41:57,857 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:41:57,944 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:41:58,141 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:41:58,141 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:41:58,141 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:41:58,143 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:41:58,952 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:41:58,952 - WARNING - Exception: list index out of range
-2018-09-11 22:41:59,081 - DEBUG - END ----- End of program
-2018-09-11 22:43:56,915 - DEBUG - NEW ----- Start of program
-2018-09-11 22:43:56,918 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:43:57,011 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:43:57,225 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:43:57,225 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:43:57,226 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:43:57,228 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:43:57,993 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:43:57,994 - WARNING - Exception: list index out of range
-2018-09-11 22:43:58,258 - DEBUG - END ----- End of program
-2018-09-11 22:44:28,063 - DEBUG - NEW ----- Start of program
-2018-09-11 22:44:28,066 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:44:28,155 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:44:28,352 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:44:28,353 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:44:28,353 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:44:28,354 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:44:29,051 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:44:29,051 - WARNING - Exception: list index out of range
-2018-09-11 22:44:29,053 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:44:29,131 - DEBUG - END ----- End of program
-2018-09-11 22:44:40,030 - DEBUG - NEW ----- Start of program
-2018-09-11 22:44:40,033 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:44:40,123 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:44:40,317 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:44:40,318 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:44:40,318 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:44:40,320 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:44:41,030 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:44:41,030 - WARNING - Exception: list index out of range
-2018-09-11 22:44:41,031 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:44:41,111 - DEBUG - END ----- End of program
-2018-09-11 22:49:14,244 - DEBUG - NEW ----- Start of program
-2018-09-11 22:49:14,247 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-11 22:49:14,334 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-11 22:49:14,556 - WARNING - Problem with loading the Accuweather API
-2018-09-11 22:49:14,557 - WARNING - Error with the accuweather hourly for loop
-2018-09-11 22:49:14,557 - WARNING - Exception: 'NoneType' object is not subscriptable
-2018-09-11 22:49:14,561 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-11 22:49:15,281 - WARNING - Error with the Dark Sky API hourly for loop
-2018-09-11 22:49:15,281 - WARNING - Exception: list index out of range
-2018-09-11 22:49:15,414 - DEBUG - END ----- End of program
+2018-09-12 13:35:42,368 - DEBUG - NEW ----- Start of program
+2018-09-12 13:35:42,376 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:35:42,479 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:35:42,479 - WARNING - 'rain'
+2018-09-12 13:35:42,481 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:35:42,668 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:35:42,668 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:35:42,668 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:35:42,668 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:35:42,671 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:35:43,566 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:35:44,057 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:35:45,977 - DEBUG - END ----- End of program
+2018-09-12 13:36:35,981 - DEBUG - NEW ----- Start of program
+2018-09-12 13:36:35,993 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:36:36,092 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:36:36,092 - WARNING - 'rain'
+2018-09-12 13:36:36,095 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:36:36,325 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:36:36,325 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:36:36,325 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:36:36,325 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:36:36,328 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:36:37,852 - DEBUG - END ----- End of program
+2018-09-12 13:37:45,467 - DEBUG - NEW ----- Start of program
+2018-09-12 13:37:45,477 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:37:45,582 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:37:45,583 - WARNING - 'rain'
+2018-09-12 13:37:45,585 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:37:45,889 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:37:45,890 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:37:45,890 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:37:45,890 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:37:45,895 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:37:47,557 - DEBUG - END ----- End of program
+2018-09-12 13:38:23,383 - DEBUG - NEW ----- Start of program
+2018-09-12 13:38:23,392 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:38:23,494 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:38:23,494 - WARNING - 'rain'
+2018-09-12 13:38:23,497 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:38:23,685 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:38:23,685 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:38:23,685 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:38:23,685 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:38:23,689 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:38:25,301 - DEBUG - END ----- End of program
+2018-09-12 13:39:34,269 - DEBUG - NEW ----- Start of program
+2018-09-12 13:39:34,277 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:39:34,377 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:39:34,377 - WARNING - 'rain'
+2018-09-12 13:39:34,380 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:39:34,581 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:39:34,581 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:39:34,582 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:39:34,582 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:39:34,585 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:39:36,459 - DEBUG - END ----- End of program
+2018-09-12 13:52:43,512 - DEBUG - NEW ----- Start of program
+2018-09-12 13:52:43,521 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:52:45,923 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:52:45,923 - WARNING - 'rain'
+2018-09-12 13:52:45,926 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:52:46,157 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:52:46,157 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:52:46,157 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:52:46,157 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:52:46,160 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:52:47,728 - INFO - Problem with the average precipitation
+2018-09-12 13:52:47,729 - INFO - x and y must have same first dimension, but have shapes (6,) and (5,)
+2018-09-12 13:52:47,729 - DEBUG - END ----- End of program
+2018-09-12 13:54:32,912 - DEBUG - NEW ----- Start of program
+2018-09-12 13:54:32,920 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:54:33,105 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:54:33,105 - WARNING - 'rain'
+2018-09-12 13:54:33,108 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:54:33,338 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:54:33,339 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:54:33,339 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:54:33,339 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:54:33,343 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:54:35,261 - DEBUG - END ----- End of program
+2018-09-12 13:55:56,152 - DEBUG - NEW ----- Start of program
+2018-09-12 13:55:56,161 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:55:56,269 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:55:56,270 - WARNING - 'rain'
+2018-09-12 13:55:56,272 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:55:56,533 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:55:56,534 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:55:56,534 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:55:56,534 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:55:56,538 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:55:57,704 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:55:57,785 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:55:57,786 - WARNING - 'rain'
+2018-09-12 13:55:57,786 - DEBUG - END ----- End of program
+2018-09-12 13:56:52,057 - DEBUG - NEW ----- Start of program
+2018-09-12 13:56:52,068 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:56:52,253 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:56:52,253 - WARNING - 'rain'
+2018-09-12 13:56:52,255 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 13:56:52,441 - WARNING - Problem with loading the Accuweather API
+2018-09-12 13:56:52,441 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 13:56:52,441 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 13:56:52,441 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 13:56:52,444 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 13:56:53,371 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:56:53,465 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 13:56:53,544 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 13:56:53,544 - WARNING - 'rain'
+2018-09-12 13:56:53,545 - DEBUG - END ----- End of program
+2018-09-12 14:01:31,396 - DEBUG - NEW ----- Start of program
+2018-09-12 14:01:31,407 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 14:01:31,521 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 14:01:31,521 - WARNING - 'rain'
+2018-09-12 14:01:31,523 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-12 14:01:31,736 - WARNING - Problem with loading the Accuweather API
+2018-09-12 14:01:31,736 - WARNING - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
+2018-09-12 14:01:31,737 - WARNING - Error with the accuweather hourly for loop
+2018-09-12 14:01:31,737 - WARNING - Exception: 'NoneType' object is not subscriptable
+2018-09-12 14:01:31,740 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-12 14:01:32,666 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 14:01:32,752 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-12 14:01:32,831 - WARNING - Error with the Open Weather API hourly for loop
+2018-09-12 14:01:32,832 - WARNING - 'rain'
+2018-09-12 14:01:33,044 - DEBUG - END ----- End of program

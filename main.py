@@ -70,22 +70,25 @@ def dark_sky_api_hourly():
     try:
         for k, v in dark_sky_api().items():
             if k == "hourly":
-                # Dark sky API provides its data hourly. So we need to skip hours to get the 3 hour forecast
-                for time in (v["data"])[:33:3]:
+                # Dark sky API provides its data hourly for 48 hours. So we need to skip hours to get the 3 hour forecast
+                for time in (v["data"])[2:20:3]:
                     dsky_weather_hourly = list()
                     # convert the UNIX timestamp in a human readable time
                     unix_time_stamp = (time["time"])
                     real_time = (datetime.fromtimestamp(unix_time_stamp).strftime("%Y-%m-%d %H:%M:%S"))
                     dsky_weather_hourly.append("Time: "+str(real_time))
-                    dsky_weather_hourly.append("Description: "+time["summary"])
                     # convert from fahrenheit to celcius
                     celcius = round((((time["temperature"]) - 32) * 0.5556))
                     dsky_weather_hourly.append("Temp: "+str(celcius))
                     # remove the decimal point from the humidity
                     humidity = (str(time["humidity"])).split(".")
                     dsky_weather_hourly.append("Humidity: "+humidity[1])
-                    precipitation = (str(time["precipProbability"])).split(".")
-                    dsky_weather_hourly.append("Precipitation Percent: "+precipitation[1])
+                    precipitation = (str(time["precipProbability"]))
+                    precipitation_split = (str(time["precipProbability"])).split(".")
+                    if precipitation.startswith("0.0") or precipitation == "0":
+                        dsky_weather_hourly.append("Precipitation Percent: 0")
+                    else:
+                        dsky_weather_hourly.append("Precipitation Percent: "+precipitation_split[1])
                     dsky_weather.append(dsky_weather_hourly)
     except Exception as err:
         logging.warning("Error with the Dark Sky API hourly for loop")
@@ -113,7 +116,7 @@ def open_weather_api_hourly():
     try:
         for k, v in open_weather_api().items():
             if k == "list":
-                for key in v[:7]:
+                for key in v:
                     owm_weather_hour = list()
                     owm_weather_hour.append("Time: "+key["dt_txt"])
                     # -273 to convert from Kelvin to Celcius
@@ -225,6 +228,7 @@ def open_weather_map_humidity():
         logging.info("Problem with the OWM humidity graph")
         logging.info(str(err))
 
+
 def open_weather_map_precip():
     try:
         plt.plot(time_list, float_precipitation_list_for_graph, color="red")
@@ -281,11 +285,11 @@ for key in dark_sky_api_hourly():
     # add the time, temp and humidity to lists so they can be plotted
     dsky_time = key[0].split(" ")
     dsky_time_for_graph.append(dsky_time[2])
-    dsky_temp = key[2].split(" ")
+    dsky_temp = key[1].split(" ")
     dsky_temp_for_graph .append(dsky_temp[1])
-    dsky_humidity = key[3].split(" ")
+    dsky_humidity = key[2].split(" ")
     dsky_humidity_for_graph.append(dsky_humidity[1])
-    dsky_precipitation = key[4].split(" ")
+    dsky_precipitation = key[3].split(" ")
     dsky_precipitation_for_graph.append(dsky_precipitation[2])
 
 # convert temp from string to floats for an ascending y-axis
@@ -399,6 +403,29 @@ def average_humidity():
         plt.show()
     except Exception as err:
         logging.info("Problem with the average humidity graph")
+        logging.info(str(err))
+
+
+def average_precipitation():
+    try:
+        avg_precip = []
+        num_count = 0
+
+        for owm_num in float_precipitation_list_for_graph:
+            avg_precip.append((owm_num + float_dsky_precipitation_for_graph[num_count]) / 2)
+            num_count += 1
+
+        plt.plot(dsky_time_for_graph, avg_precip, color="red")
+        plt.title("Average Precipitation (Dark Sky and OWM)")
+        plt.xlabel("Time")
+        plt.gcf().autofmt_xdate()
+        plt.ylabel("Precipitation")
+        plt.yticks(y_axis_asc_precipitation())
+        plt.grid(True)
+        plt.show()
+
+    except Exception as err:
+        logging.info("Problem with the average precipitation")
         logging.info(str(err))
 
 
