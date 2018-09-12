@@ -1,5 +1,5 @@
 # !# python 3
-# this program will get the weather from open weather map. With 3 hour forecasts
+# this program will get the weather from 3 API's and graph the data
 
 import requests
 import json
@@ -71,7 +71,7 @@ def dark_sky_api_hourly():
         for k, v in dark_sky_api().items():
             if k == "hourly":
                 # Dark sky API provides its data hourly for 48 hours. So we need to skip hours to get the 3 hour forecast
-                for time in (v["data"])[2:20:3]:
+                for time in (v["data"])[1:27:3]:
                     dsky_weather_hourly = list()
                     # convert the UNIX timestamp in a human readable time
                     unix_time_stamp = (time["time"])
@@ -116,13 +116,15 @@ def open_weather_api_hourly():
     try:
         for k, v in open_weather_api().items():
             if k == "list":
-                for key in v:
+                for key in v[:9]:
                     owm_weather_hour = list()
                     owm_weather_hour.append("Time: "+key["dt_txt"])
                     # -273 to convert from Kelvin to Celcius
                     owm_weather_hour.append("Temp: "+str(round((key["main"]["temp"])-273)))
                     owm_weather_hour.append("Humidity: "+str(key["main"]["humidity"]))
-                    if (str(key["rain"])) == "{}":
+                    if key.get("rain") is None:
+                        owm_weather_hour.append("Precipitation: 0")
+                    elif (str(key["rain"])) == "{}":
                         owm_weather_hour.append("Precipitation: 0")
                     else:
                         owm_weather_hour.append(str("Precipitation: "+str(key["rain"]["3h"])))
