@@ -15,3 +15,7 @@ Users will require their own API keys! Please see the following for more:
 - https://developer.accuweather.com/
 - https://darksky.net/dev
 - https://openweathermap.org/
+
+I used the following API for geocoding (you should too :) ) 
+
+- https://developer.here.com/

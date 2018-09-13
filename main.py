@@ -14,6 +14,33 @@ owm_api_key = ""
 dark_sky_api_key = ""
 acc_api_key = ""
 
+geocoder_id = ""
+geocoder_code = ""
+
+
+# Geocode - Will decode user input into Latitude and Longitude for location of weather forecast
+
+
+def geocoding():
+    try:
+
+        location = input("Enter location for forecast:")
+        api_res = requests.get("https://geocoder.api.here.com/6.2/geocode.json?app_id=%s&app_code=%s&searchtext=%s" % (geocoder_id, geocoder_code, location))
+        api_res.raise_for_status()
+        api_json = json.loads(api_res.text)
+
+        lst = api_json["Response"]["View"]
+        latitude = (lst[0]["Result"][0]["Location"]["DisplayPosition"]["Latitude"])
+        longitude = (lst[0]["Result"][0]["Location"]["DisplayPosition"]["Longitude"])
+
+        latlng = str(latitude) +" "+str(longitude)
+
+        return latlng
+
+    except Exception as err:
+        logging.info("Problem with the Geocoder")
+        logging.info(str(err))
+
 
 # Accuweather API -----
 
@@ -56,7 +83,8 @@ def accuweather_api_hourly():
 
 def dark_sky_api():
     try:
-        dsky_dublin = requests.get("https://api.darksky.net/forecast/%s/53.3498,6.2603" % dark_sky_api_key)
+        location = geocoding()
+        dsky_dublin = requests.get("https://api.darksky.net/forecast/%s/%s,%s" % (dark_sky_api_key, location[0], location[1]))
         dsky_dublin.raise_for_status()
         dsky_json = json.loads(dsky_dublin.text)
         return dsky_json
@@ -102,7 +130,8 @@ def dark_sky_api_hourly():
 
 def open_weather_api():
     try:
-        owm_dublin = requests.get("http://api.openweathermap.org/data/2.5/forecast?id=2964574&APPID=%s" % owm_api_key)
+        location = geocoding()
+        owm_dublin = requests.get("http://api.openweathermap.org/data/2.5/forecast?lat=%s&lon=%s&APPID=%s" % (location[0], location[1], owm_api_key))
         owm_dublin.raise_for_status()
         owm_json = json.loads(owm_dublin.text)
         return owm_json
@@ -142,7 +171,7 @@ def y_axis_asc_temp():
     # this method will set the y axis numbers for the temp
     try:
         plot_data_for_temp = []
-        for i in range(-5, 30, 2):
+        for i in range(-5, 36, 2):
             plot_data_for_temp.append(i)
         return plot_data_for_temp
     except Exception as err:
@@ -429,6 +458,5 @@ def average_precipitation():
     except Exception as err:
         logging.info("Problem with the average precipitation")
         logging.info(str(err))
-
 
 logging.debug("END ----- End of program")
