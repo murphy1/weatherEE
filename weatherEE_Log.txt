@@ -1,42 +1,28 @@
-2018-09-18 13:54:37,423 - DEBUG - NEW ----- Start of program
-2018-09-18 13:54:37,433 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 13:54:38,142 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 13:54:38,942 - DEBUG - END ----- End of program
-2018-09-18 13:59:18,347 - DEBUG - NEW ----- Start of program
-2018-09-18 13:59:18,360 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 13:59:18,945 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 13:59:19,756 - DEBUG - END ----- End of program
-2018-09-18 14:01:24,003 - DEBUG - NEW ----- Start of program
-2018-09-18 14:01:24,017 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 14:01:24,688 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 14:01:25,324 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-18 14:01:26,618 - DEBUG - END ----- End of program
-2018-09-18 14:01:51,821 - DEBUG - NEW ----- Start of program
-2018-09-18 14:01:51,834 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 14:01:52,569 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 14:01:53,104 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-18 14:01:53,905 - DEBUG - END ----- End of program
-2018-09-18 14:04:13,413 - DEBUG - NEW ----- Start of program
-2018-09-18 14:04:13,421 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 14:04:13,922 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 14:04:14,791 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-18 14:04:14,983 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-18 14:04:15,434 - INFO - Problem with the init method
-2018-09-18 14:04:15,434 - INFO - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
-2018-09-18 14:04:16,114 - DEBUG - END ----- End of program
-2018-09-18 14:04:23,884 - DEBUG - NEW ----- Start of program
-2018-09-18 14:04:23,892 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 14:04:24,462 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 14:04:25,068 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-18 14:04:25,171 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-18 14:04:25,370 - INFO - Problem with the init method
-2018-09-18 14:04:25,370 - INFO - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
-2018-09-18 14:04:26,068 - DEBUG - END ----- End of program
-2018-09-18 14:10:04,473 - DEBUG - NEW ----- Start of program
-2018-09-18 14:10:04,482 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
-2018-09-18 14:10:05,023 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
-2018-09-18 14:10:05,806 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
-2018-09-18 14:10:05,917 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
-2018-09-18 14:10:06,165 - INFO - Problem with the init method
-2018-09-18 14:10:06,165 - INFO - 401 Client Error: Unauthorized for url: http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=
-2018-09-18 14:10:06,872 - DEBUG - END ----- End of program
+2018-09-21 16:12:14,140 - DEBUG - NEW ----- Start of program
+2018-09-21 16:12:14,153 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
+2018-09-21 16:12:14,803 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-21 16:12:15,351 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-21 16:12:15,473 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:16,131 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:16,704 - DEBUG - END ----- End of program
+2018-09-21 16:12:27,061 - DEBUG - NEW ----- Start of program
+2018-09-21 16:12:27,070 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
+2018-09-21 16:12:27,591 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-21 16:12:28,092 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-21 16:12:28,200 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:28,834 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:29,574 - DEBUG - END ----- End of program
+2018-09-21 16:12:50,058 - DEBUG - NEW ----- Start of program
+2018-09-21 16:12:50,069 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
+2018-09-21 16:12:50,563 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-21 16:12:51,252 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-21 16:12:51,410 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:51,714 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:12:52,387 - DEBUG - END ----- End of program
+2018-09-21 16:13:11,225 - DEBUG - NEW ----- Start of program
+2018-09-21 16:13:11,234 - DEBUG - Starting new HTTPS connection (1): geocoder.api.here.com:443
+2018-09-21 16:13:11,740 - DEBUG - Starting new HTTPS connection (1): api.darksky.net:443
+2018-09-21 16:13:12,526 - DEBUG - Starting new HTTP connection (1): api.openweathermap.org:80
+2018-09-21 16:13:12,613 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:13:12,827 - DEBUG - Starting new HTTP connection (1): dataservice.accuweather.com:80
+2018-09-21 16:13:13,281 - DEBUG - END ----- End of program

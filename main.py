@@ -7,6 +7,8 @@ import matplotlib.pyplot as plt
 logging.basicConfig(filename="weatherEE_Log.txt", level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
 logging.debug("NEW ----- Start of program")
 
+# API Keys
+
 owm_api_key = ""
 dark_sky_api_key = ""
 acc_api_key = ""
@@ -53,12 +55,17 @@ class Weather(object):
 
             # get API request for Accuweather
 
-            acc_dublin = requests.get(
-                "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/207931?apikey=%s" % acc_api_key)
-            acc_dublin.raise_for_status()
-            self.acc_json = json.loads(acc_dublin.text)
-            acc_dublin.close()
+            acc_location = requests.get("http://dataservice.accuweather.com/locations/v1/search?apikey=%s&q=%s" % (acc_api_key, forecast_location))
+            acc_location.raise_for_status()
+            self.acc_location_json = json.loads(acc_location.text)
+            first_location = self.acc_location_json[0]['Key']
+            acc_location.close()
 
+            acc_code = requests.get(
+                "http://dataservice.accuweather.com/forecasts/v1/hourly/12hour/%s?apikey=%s" % (first_location, acc_api_key))
+            acc_code.raise_for_status()
+            self.acc_json = json.loads(acc_code.text)
+            acc_code.close()
 
         except Exception as err:
             logging.info("Problem with the init method")
